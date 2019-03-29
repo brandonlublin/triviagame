@@ -1,13 +1,12 @@
-window.onload = function() {
+window.onload = function () {
+
+    //setting data variables and time to countdown
     var intervalId;
     var timeLeft = 31;
     var correctAnswers;
     var incorrectAnswers;
-
-    // var questionsAnswers = {
-    //     question1
-    // }
-
+    
+    //question object, displays the question, choices for each, and the answer by index of the array
     var questionsObj = [{
         question1: 'In the movie "Happy Gilmore", what sport did Adam Sandler play?',
         choices: ['Golf', 'Football', 'Foosball', 'Soccer'],
@@ -39,13 +38,13 @@ window.onload = function() {
     }];
 
     function determineCorrectAnswer() {
-        // if (quiz.questions.question1.value == 'Football') {
-        //     correctAnswers++
-        //     console.log(correctAnswers);
-        // }
+        if (quiz.questions.question1.value == 'Football') {
+            correctAnswers++
+
+        }
         if (quiz.questions.question2.value == questionsObj.answer) {
             correctAnswers++
-            console.log(correctAnswers);
+
             
         }
         if (quiz.questions.question3.value == 'Dude') {
@@ -73,10 +72,17 @@ window.onload = function() {
         //hides the start button and instruction panel, shows questions, starts countdown
         $('#startContainer').hide();
         $('#instructionContainer').hide();
+
+        //display the questions after the game has started 
         $('#questions').show();
         $('#submitButton').show();
+
+        //start timer and allow button clicks on bubbles 
         runGame();
         decrement();
+
+        //initiate jeopardy song 
+        $('#jeopardy')[0].play();
     })
     function runGame() {
         clearInterval(intervalId);
@@ -104,19 +110,33 @@ window.onload = function() {
         clearInterval(intervalId);
         $('#timeRemaining').html('<h2>The game has ended!</h2>');
         $('#questions').hide();
+
+        //display game over container and hide the submit button 
         $('#gameOver').show();
+        $('#submitButton').hide();
+
         $('#correctAnswersTotal').text('You answered ' + correctAnswers + ' correctly.')
         $('#incorrectAnswersTotal').text('You answered ' + incorrectAnswers + ' incorrectly.')
-        $('#submitButton').hide();
+        
+        //pause jeopardy music and play finish trumpet
+        $('#jeopardy')[0].pause();
+        $('#trumpet')[0].play();
+
+        //calculate score
         determineCorrectAnswer();
     }
+    //asks user to play again, restarts game if clicked
     $('.playAgainButton').on('click', function() {
+        //restart variables 
         timeLeft = 31;
         correctAnswers = 0;
         incorrectAnswers = 0;
+
+        //toggle songs, toggle viewport
         $('#startContainer').show();
         $('#gameOver').hide();
         $('#instructionContainer').show();
+        $('#trumpet')[0].pause();
     })
     
 }
