@@ -20,8 +20,8 @@
 }
 #startContainer {
     background-color: honeydew;
-    padding-top: 20px;
-    padding-bottom: 100px;
+    padding-top: 40px;
+    padding-bottom: 120px;
     font-size: 45px;
     cursor: pointer;
     text-align: center;
@@ -40,15 +40,16 @@
     padding-top: 50px;
     padding-bottom: 50px;
     font-size: 20px;
+    border: 1px dotted #44aa44;
 }
 #instructionContainer {
     background-color: honeydew;
-    padding-top: 30px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 80px;
     font-size: 15px;
     text-align: center;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 25%;
     position: absolute;
     width: 960px;
     height: 100px;
@@ -83,28 +84,40 @@
     color: black;
     font-size: 50px;
 }
+h1, h2 {
+    font-size: 30px;
+    
+}
 h3 {
     display: flexbox;
     color: #44aa44;
 }
 .row1 {
     border: 1px dotted #44aa44;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding: 20px;
     color: #19472C;
+    background-color: honeydew;
 }
-#questions {
-    
+.questions {
+    height: 120px;
+    padding: 20px;
     font-family: 'Merriweather', serif;
+    line-break: 10px;
+}
+.option {
+    margin-left: 8px;
+    line-height: 30px;
+    margin-right: 8px;
 }
 #timer {
     font-size: 50px;
     color: #19472C;
 }
-.row1, .question1, .question3, .question5, .question7 {
+.questions:nth-child(odd) {
     border: 1px dotted #44aa44;
     background-color: honeydew;
 }
+
 #submitButton {
     line-height: 20px;
     padding: 20px;
