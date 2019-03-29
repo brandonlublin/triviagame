@@ -10,7 +10,7 @@ window.onload = function () {
     var questionsObj = [{
         question1: 'In the movie "Happy Gilmore", what sport did Adam Sandler play?',
         choices: ['Golf', 'Football', 'Foosball', 'Soccer'],
-        answer: 1
+        answer: 0
     }, {
         question2: 'What type of action figure was Woody in the movie "Toy Story"?',
         choices: ['John Stamos & Sylvester Stallone', 'Ricky Martin and Christina Aguilera', 'Bob Ross & Hillary Clinton', 'John Travolta & Samuel L. Jackson'],
@@ -38,30 +38,31 @@ window.onload = function () {
     }];
 
     function determineCorrectAnswer() {
-        if (quiz.questions.question1.value == 'Football') {
-            correctAnswers++
+        
+        // if (quiz.questions.question1.value == 'Football') {
+        //     correctAnswers++
 
-        }
-        if (quiz.questions.question2.value == questionsObj.answer) {
-            correctAnswers++
+        // }
+        // if (quiz.questions.question2.value == questionsObj.answer) {
+        //     correctAnswers++
 
             
-        }
-        if (quiz.questions.question3.value == 'Dude') {
-            correctAnswers++
-        }
-        if (quiz.questions.question4.value == 'Football') {
-            correctAnswers++
-        }
-        if (quiz.questions.question5.value == 'Football') {
-            correctAnswers++
-        }
-        if (quiz.questions.question6.value == 'Football') {
-            correctAnswers++
-        }
-        if (quiz.questions.question7.value == 'Football') {
-            correctAnswers++
-        }
+        // }
+        // if (quiz.questions.question3.value == 'Dude') {
+        //     correctAnswers++
+        // }
+        // if (quiz.questions.question4.value == 'Football') {
+        //     correctAnswers++
+        // }
+        // if (quiz.questions.question5.value == 'Football') {
+        //     correctAnswers++
+        // }
+        // if (quiz.questions.question6.value == 'Football') {
+        //     correctAnswers++
+        // }
+        // if (quiz.questions.question7.value == 'Football') {
+        //     correctAnswers++
+        // }
 
     }
     $('#questions').hide();
@@ -120,6 +121,7 @@ window.onload = function () {
         
         //pause jeopardy music and play finish trumpet
         $('#jeopardy')[0].pause();
+        $('#jeopardy').currentTime = 0;
         $('#trumpet')[0].play();
 
         //calculate score
