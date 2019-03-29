@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link href="https://fonts.googleapis.com/css?family=Abel|Merriweather" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+        <script type='text/javascript' src='/assets/javascript/app.js'></script>
+    </head>
+    <body>
+        
+        <img class='logo' src="/assets/images/Geometric-90s-Wall-Mural-Murals-Wallpaper.jpg" alt="90s">
+        <div class='container1'>
+            <div id='instructionContainer'>Instructions: You will have 30 seconds to answer as many questions as possible. At the end of the 30 seconds, your total score will be tallied up. Hit 'Start' below to begin playing!</div>
+            <br>
+            <div class='row1'>
+                <h1>1990's Movie Quiz</h1>  
+                <h2>How well do you know the 90's? This quiz will put your knowledge to the test.</h2>
+            </div>
+            <div class='row2'>
+                <br><br>
+                <div id='timeRemaining'></div>
+            </div>
+            <br><br>
+            <!-- start button -->
+            <div id='startContainer'>Start Playing</div>
+            <!-- questions -->
+            <div id='gameOver'>
+                <h2 id='correctAnswersTotal'></h2>
+                <h2 id='incorrectAnswersTotal'></h2>
+                <div class='playAgainButton'>Play Again?</div>
+            </div>
+            <form id="quiz" class="quiz" name="quiz">
+                <div id='questions'>
+                    <div class='question1'>
+                        <p>In the movie 'Happy Gilmore', what sport did Adam Sandler play?</p>
+                            <input type="radio" id="mc" name="question1" value=""> Golf <br>
+                            <input type="radio" id="mc" name="question1" value=""> Football <br>
+                            <input type="radio" id="mc" name="question1" value=""> Foosball <br>
+                            <input type="radio" id="mc" name="question1" value=""> Soccer <br>
+                        <br>
+                    </div>
+                    <div class='question2'>
+                        <p>What type of action figure was Woody in the movie 'Toy Story'?</p>
+                            <input type="radio" id="mc" name="question2" value=""> Donkey<br>
+                            <input type="radio" id="mc" name="question2" value=""> Frog <br>
+                            <input type="radio" id="mc" name="question2" value=""> Cowboy <br>
+                            <input type="radio" id="mc" name="question2" value=""> Lizard <br>
+                        <br>
+                    </div>
+                    <div class='question3'>
+                        <p>Who were the two primary characters in the movie "Pulp Fiction"?</p>
+                            <input type="radio" id="mc" name="question3" value=""> John Stamos & Sylvester Stallone <br>
+                            <input type="radio" id="mc" name="question3" value=""> Ricky Martin and Christina Aguilera  <br>
+                            <input type="radio" id="mc" name="question3" value=""> Bob Ross & Hillary Clinton <br>
+                            <input type="radio" id="mc" name="question3" value=""> John Travolta & Samuel L. Jackson <br>
+                        <br>
+                    </div>
+                    <div class='question4'>
+                        <p>In the movie "The Big Lebowski", Jeff Bridges was often referred to as the ______ .</p>
+                            <input type="radio" id="mc" name="question4" value=""> Loser <br>
+                            <input type="radio" id="mc" name="question4" value=""> Silent One<br>
+                            <input type="radio" id="mc" name="question4" value=""> Dude <br>
+                            <input type="radio" id="mc" name="question4" value=""> Solo Dolo <br>
+                        <br>
+                    </div>
+                    <div class='question5'>
+                        <p>In the 1994 movie "The Lion King", Mufasa's wife name was _______.</p>
+                            <input type="radio" id="mc" name="question5" value=""> Beyonce <br>
+                            <input type="radio" id="mc" name="question5" value=""> Shakira <br>
+                            <input type="radio" id="mc" name="question5" value=""> Cher <br>
+                            <input type="radio" id="mc" name="question5" value=""> Nala <br>
+                        <br>
+                    </div>
+                    <div class='question6'>
+                        <p>What would have happened if the Keanu Reeves allowed the bus to drop below 50 MPH in the movie 'Speed'?</p>
+                            <input type="radio" id="mc" name="question6" value=""> The bus would explode <br>
+                            <input type="radio" id="mc" name="question6" value=""> His phone would explode <br>
+                            <input type="radio" id="mc" name="question6" value=""> His wife would've lost her job <br>
+                            <input type="radio" id="mc" name="question6" value=""> The bus driver would give him a high 5 <br>
+                        <br>
+                    </div>
+                    <div class='question7'>
+                        <p>"Hasta La Vista, Baby" was a famous quote from this 1991 film. </p>
+                            <input type="radio" id="mc" name="question7" value=""> Terminator 2<br>
+                            <input type="radio" id="mc" name="question7" value=""> Terminator 3 <br>
+                            <input type="radio" id="mc" name="question7" value=""> A Bug's Life <br>
+                            <input type="radio" id="mc" name="question7" value=""> Pee Wee Herman's Vacation <br>
+                        <br>
+                    </div>
+                </form>
+            </div>
+            <br>
+            <div id='submitButton'>Submit</div>
+            <br><br><br>
+        <br>
+        </div>  
+    </body>
+</html>
